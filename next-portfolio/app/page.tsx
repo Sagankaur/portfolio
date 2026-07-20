@@ -119,10 +119,88 @@ const projects = [
     title: "QC-Leap",
     subtitle: "AI-Powered Manufacturing Quality Control System",
     href: "https://github.com/kushabarodekar/soft-engg-project-sep-2025-se-SEP-20",
-    stack: "Next.js, TypeScript, Tailwind CSS",
+    stack: "Next.js, React, TypeScript, FastAPI, PostgreSQL, Redis, Celery, PyTorch, OpenCV, Docker",
     highlights: [
-      "Developed application workflows for automated defect detection using computer vision.",
-      "Focused on integrating ML models into a usable production-style interface.",
+      "Built a full-stack quality-control dashboard for defect detection model management, training, inference, and reporting.",
+      "Implemented ML workflows with segmentation masks, Copy-Paste augmentation, class balancing, and MobileNetV3-Small classification.",
+      "Developed FastAPI services with JWT auth, PostgreSQL models, Redis/Celery jobs, and real-time training progress updates.",
+    ],
+  },
+  {
+    title: "SiteSage AI",
+    subtitle: "Construction procurement intelligence copilot",
+    href: "https://github.com/Sagankaur/Construction-Procurement-Intelligence-Agent",
+    stack: "Python, Streamlit, LangChain, Ollama, FAISS, SQLite, Scikit-learn, Plotly, Docker, Kubernetes",
+    highlights: [
+      "Built a multi-page procurement dashboard for document upload, cited AI question answering, delay prediction, vendor risk, and alerts.",
+      "Implemented local RAG with document chunking, HashingVectorizer embeddings, FAISS retrieval, SQLite persistence, and grounded-answer fallbacks.",
+      "Developed Random Forest delay-risk scoring, vendor reliability ranking, schedule-impact alerts, demo datasets, tests, Docker, and Kubernetes manifests.",
+    ],
+  },
+  {
+    title: "Satellite Image Cloud Removal",
+    subtitle: "Generative AI reconstruction for remote sensing imagery",
+    href: "https://github.com/Sagankaur/Bharatiya-Antariksh-Hackathon",
+    stack: "Python, PyTorch, ResUNet, GAN, OpenCV, NumPy, Pandas, Matplotlib, Kaggle GPU",
+    highlights: [
+      "Built a cloud-removal pipeline mapping cloudy optical imagery and masks to reconstructed cloud-free satellite outputs.",
+      "Prepared RICE1/RICE2 manifests, trained a mask-guided ResUNet with cloud-aware L1 and SSIM loss, and exported visual predictions.",
+      "Reached about 22.74 dB PSNR and 0.796 SSIM on RICE2 testing, then explored GAN refinement and Bhoonidhi LISS-IV data automation.",
+    ],
+  },
+  {
+    title: "Multilingual Speech Recognition",
+    subtitle: "Routed ASR pipeline under compute constraints",
+    href: "https://github.com/Sagankaur/Multilingual-Speech-Recognition",
+    stack: "Python, PyTorch, Hugging Face, Whisper, Faster-Whisper, Indic Conformer, Librosa, Torchaudio, Kaggle",
+    highlights: [
+      "Built an English, Hindi, and Tamil transcription pipeline for a Kaggle speech recognition challenge.",
+      "Added language identification and dynamic model routing across Whisper large-v3-turbo and Indic Conformer models.",
+      "Implemented transcript normalization, WER evaluation, beam-search inference, FP16 GPU execution, caching, and Kaggle submission generation.",
+    ],
+  },
+  {
+    title: "Multilingual Sentiment Analysis",
+    subtitle: "LLM fine-tuning for Indian-language sentiment classification",
+    href: "https://github.com/Sagankaur/Multilingual-Sentiment-Analysis",
+    stack: "Python, Hugging Face Transformers, Gemma, LoRA, PEFT, bitsandbytes",
+    highlights: [
+      "Fine-tuned google/gemma-3-1b-it with LoRA/PEFT for binary sentiment classification across 13 Indian languages.",
+      "Built preprocessing, label encoding, tokenization, training, validation, diagnostics, and Kaggle submission workflows.",
+      "Used memory-efficient training with bitsandbytes and Hugging Face Trainer, reaching 0.9778 local validation Macro F1.",
+    ],
+  },
+  {
+    title: "Low-Light Image Restoration",
+    subtitle: "Denoising, illumination correction, and 4x super-resolution",
+    href: "https://github.com/Sagankaur/Denoising-and-Super-Resolution-Images/",
+    stack: "Python, PyTorch, NumPy, Pandas, PIL, Matplotlib, Seaborn, U-Net, PixelShuffle, CUDA",
+    highlights: [
+      "Built a PyTorch restoration pipeline for the RELLISUR/Kaggle dataset with denoising, illumination correction, and 4x super-resolution.",
+      "Designed a custom SR U-Net with encoder-decoder blocks, skip connections, PixelShuffle upscaling, and refinement layers.",
+      "Reduced private RMSE from a 41.8 baseline to about 18.7 using EDA-driven modeling, loss tuning, mixed precision, TTA, and calibration.",
+    ],
+  },
+  {
+    title: "End-to-End MLOps Pipeline",
+    subtitle: "Cloud-native ML deployment and observability",
+    href: "https://github.com/Sagankaur/23f2003511_MLOPS_WEEKLY_ASSIGNMENT",
+    stack: "Python, Scikit-learn, MLflow, DVC, GCS, Feast, BigQuery, FastAPI, Docker, GKE, OpenTelemetry",
+    highlights: [
+      "Built an Iris classification pipeline with cloud artifact storage, data versioning, feature store setup, and experiment tracking.",
+      "Automated CI/CD with GitHub Actions, pytest, CML reports, Dockerized FastAPI serving, Kubernetes deployment, HPA, and load testing.",
+      "Added model explainability, fairness checks, drift monitoring, guardrails, and LLMOps/MLSecOps experiments.",
+    ],
+  },
+  {
+    title: "RAG Document QnA",
+    subtitle: "Local retrieval-augmented document assistant",
+    href: "https://github.com/Sagankaur/rag-document-qa-system",
+    stack: "Python, FAISS, Streamlit, Gemini, NLP chunking, semantic embeddings",
+    highlights: [
+      "Built a local RAG system that synthesizes grounded answers from proprietary documents with refusal behavior for unsupported queries.",
+      "Optimized CPU-bound vector similarity search with FAISS flat L2 indexing and overlapping text chunking.",
+      "Created a Streamlit dashboard for PDF ingestion, session-state memory, constrained Gemini prompting, and citation-aware responses.",
     ],
   },
   {
@@ -163,59 +241,6 @@ const projects = [
     highlights: [
       "Analyzed sales and customer data to identify trends and improve inventory decisions.",
       "Created visualizations to communicate insights clearly.",
-    ],
-  },
-  {
-    title: "Multilingual Speech Recognition",
-    subtitle: "Speech-to-text pipeline",
-    href: "https://github.com/Sagankaur/Multilingual-Speech-Recognition",
-    stack: "Whisper, Faster-Whisper, Indic tools",
-    highlights: [
-      "Built multilingual audio transcription workflows with optimized inference.",
-      "Handled environment setup and dependency management for model execution.",
-    ],
-  },
-  {
-    title: "Multilingual Sentiment Analysis",
-    subtitle: "LLM-based sentiment classification",
-    href: "https://github.com/Sagankaur/Multilingual-Sentiment-Analysis",
-    stack: "Gemma, Prompt Engineering, Python",
-    highlights: [
-      "Leveraged Gemma for sentiment classification across multilingual datasets.",
-      "Designed prompts and evaluated model outputs for consistency and accuracy.",
-    ],
-  },
-  {
-    title: "Denoising and 4x Super-Resolution",
-    subtitle: "Low-light image restoration",
-    href: "https://github.com/Sagankaur/Denoising-and-Super-Resolution-Images/",
-    stack: "Python, U-Net, PixelShuffle, TTA",
-    highlights: [
-      "Built an end-to-end restoration pipeline for IIT Madras DLP 2026 NPPE3 on RELLISUR.",
-      "Reduced competition RMSE from 41.8 to 18.7 using SRUNet, multi-task loss, and calibration.",
-      "Used EDA to model non-Gaussian noise and improve validation across lighting conditions.",
-    ],
-  },
-  {
-    title: "End-to-End MLOps Pipeline",
-    subtitle: "Cloud-native ML deployment and observability",
-    href: "https://github.com/Sagankaur/23f2003511_MLOPS_WEEKLY_ASSIGNMENT",
-    stack: "DVC, MLflow, FastAPI, Docker, GKE, GitHub Actions, OpenTelemetry",
-    highlights: [
-      "Orchestrated data versioning, experiment tracking, model registry, and deployment on GCP.",
-      "Automated CI/CD for a Dockerized FastAPI service on GKE with HPA and load testing.",
-      "Integrated MLSecOps, drift monitoring, fairness assessment, SHAP, and LLM guardrails.",
-    ],
-  },
-  {
-    title: "RAG Document QnA",
-    subtitle: "Local retrieval-augmented document assistant",
-    href: "https://github.com/Sagankaur/rag-document-qa-system",
-    stack: "Python, FAISS, Streamlit, Gemini",
-    highlights: [
-      "Engineered a local RAG system for grounded answers from proprietary documents.",
-      "Optimized CPU-bound semantic search with FAISS flat L2 indexing.",
-      "Built a Streamlit dashboard with PDF ingestion, session state, and constrained prompts.",
     ],
   },
 ];
