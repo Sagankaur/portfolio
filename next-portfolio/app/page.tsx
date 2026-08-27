@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 const contactLinks = [
-  { label: "Email", href: "mailto:sagan.kaur.khangura@gmail.com" },
+  { label: "Email", href: "mailto:sagan.kaur.k@gmail.com" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/sagan-kaur/" },
   { label: "GitHub", href: "https://github.com/Sagankaur" },
 ];
@@ -304,7 +304,7 @@ export default function Home() {
                 View Projects
               </a>
               <a
-                href="mailto:sagan.kaur.khangura@gmail.com"
+                href="mailto:sagan.kaur.k@gmail.com"
                 className="rounded-lg border border-zinc-300 bg-white px-5 py-3 text-sm font-semibold text-zinc-950 transition hover:border-teal-600 hover:text-teal-800 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:ring-offset-2"
               >
                 Contact Me
