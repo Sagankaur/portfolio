@@ -8,6 +8,10 @@ A responsive portfolio that presents my applied ML, backend, data, and MLOps wor
 
 ![Portfolio visual featuring data dashboards, code, and a cloud pipeline](next-portfolio/public/portfolio-hero.png)
 
+![Runtime desktop screenshot of the portfolio](docs/screenshots/runtime-home-desktop.png)
+
+![Runtime mobile screenshot of the portfolio](docs/screenshots/runtime-home-mobile.png)
+
 ## Highlights
 
 - Experience across NPTEL software engineering, NLP research, and teaching assistance.
