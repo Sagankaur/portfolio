@@ -75,14 +75,14 @@ const skillGroups = [
 
 const experiences = [
   {
-    role: "Web Development Intern",
+    role: "Software Engineering Intern",
     org: "NPTEL, IIT Madras",
-    period: "Sep 2025 - Jun 2026",
+    period: "Sep 2025 - Jul 2026",
     highlights: [
-      "Developed and optimized SQL queries for large learner datasets, improving reporting efficiency.",
-      "Built Flask APIs that enabled structured data access for analytics workflows.",
-      "Automated data pipelines using PHP and SQL, reducing manual reporting effort.",
-      "Supported data workflows with validation checks to improve data quality.",
+      "Built and extended Django workflows for Local Chapter applications, corrections, and reviewer/admin actions.",
+      "Improved AISHE mapping, duplicate detection, and institutional validation using exact and fuzzy matching.",
+      "Implemented backend and frontend workflow changes across Django, Wagtail, JavaScript/TypeScript, and PostgreSQL.",
+      "Added regression coverage for authorization, validation, workflow transitions, and edge-case behavior.",
     ],
   },
   {
@@ -130,11 +130,22 @@ const projects = [
     title: "SiteSage AI",
     subtitle: "Construction procurement intelligence copilot",
     href: "https://github.com/Sagankaur/Construction-Procurement-Intelligence-Agent",
-    stack: "Python, Streamlit, LangChain, Ollama, FAISS, SQLite, Scikit-learn, Plotly, Docker, Kubernetes",
+    stack: "Python, Streamlit, FAISS, SQLite, Scikit-learn, Plotly, Ollama (optional), Docker",
     highlights: [
       "Built a multi-page procurement dashboard for document upload, cited AI question answering, delay prediction, vendor risk, and alerts.",
       "Implemented local RAG with document chunking, HashingVectorizer embeddings, FAISS retrieval, SQLite persistence, and grounded-answer fallbacks.",
-      "Developed Random Forest delay-risk scoring, vendor reliability ranking, schedule-impact alerts, demo datasets, tests, Docker, and Kubernetes manifests.",
+      "Developed Random Forest delay-risk scoring, vendor reliability ranking, schedule-impact alerts, synthetic demo data, tests, and a reproducible Docker image.",
+    ],
+  },
+  {
+    title: "Local Chapter Activity Dashboard",
+    subtitle: "Synthetic-data LC activity and follow-up prototype",
+    href: "https://github.com/Sagankaur/Local-Chapter-NPTEL",
+    stack: "Python, Flask, SQLAlchemy, SQLite, Jinja, Bootstrap, Chart.js, Docker",
+    highlights: [
+      "Built a standalone dashboard for latest-year LC activity, historical trends, and chapter-level timelines.",
+      "Added validated CSV ingestion with upserts, JSON analytics endpoints, and inactive-chapter export.",
+      "Published synthetic sample data and clearly separated this showcase from NPTEL's production Local Chapter systems.",
     ],
   },
   {

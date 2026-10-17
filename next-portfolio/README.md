@@ -1,21 +1,31 @@
-# Portfolio App
+# Portfolio application
 
-Next.js portfolio for Sagandeep Kaur.
+The deployable Next.js application for [Sagandeep Kaur's portfolio](https://portfolio-kappa-swart-36.vercel.app).
 
-## Scripts
+## Development
+
+Node.js 20.9 or newer is required.
 
 ```bash
-npm run dev
+npm ci
+npm run dev -- --hostname 0.0.0.0
+```
+
+Open <http://localhost:3000>.
+
+## Checks
+
+```bash
 npm run lint
 npm run build
 ```
 
-## Deploy
+## Structure
 
-Import the GitHub repository into Vercel and set the root directory to this folder:
+- `app/page.tsx`: experience, skills, education, and project cards
+- `app/about/page.tsx`: short profile route
+- `app/layout.tsx`: shared metadata and navigation
+- `app/globals.css`: global and Tailwind styles
+- `public/`: static visual assets
 
-```text
-next-portfolio
-```
-
-Vercel will install dependencies from `package-lock.json` and run the Next.js build.
+For Docker, deployment, content-maintenance guidance, and project limitations, see the [repository README](../README.md).
