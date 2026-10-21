@@ -7,7 +7,7 @@ const contactLinks = [
 ];
 
 const stats = [
-  { label: "IIT Madras CGPA", value: "9.04" },
+  { label: "IIT Madras CGPA", value: "8.98" },
   { label: "Project CGPA", value: "9.5" },
   { label: "IELTS", value: "7.5" },
 ];
@@ -16,7 +16,7 @@ const education = [
   {
     school: "Indian Institute of Technology, Madras",
     detail: "B.S. Data Science and Programming",
-    meta: "2023 - 2027 | CGPA: 9.04 | Project CGPA: 9.5",
+    meta: "2023 - 2027 | CGPA: 8.98 | Project CGPA: 9.5",
   },
   {
     school: "CBSE Class 12",
@@ -77,17 +77,17 @@ const experiences = [
   {
     role: "Tech Team (Full-time)",
     org: "AI4Bharat, IIT Madras",
-    period: "Oct 2026 - Present",
+    period: "Oct 2026 - Jan 2027",
     highlights: [
-      "Joined AI4Bharat's Tech Team on a full-time engagement running through January 2027.",
+      "Full-time engagement on AI4Bharat's Tech Team (21 Oct 2026 to 31 Jan 2027).",
     ],
   },
   {
     role: "Research Intern",
     org: "Applied Artificial Intelligence Institute (A2I2), Deakin University",
-    period: "2026 - Present",
+    period: "Nov 2026 - Jan 2027",
     highlights: [
-      "Working under Prof. Mohamed Abdelrazek on Adaptive Intelligence: self-adapting problem-solving strategies for AI agents.",
+      "Research internship under Prof. Mohamed Abdelrazek on Adaptive Intelligence: self-adapting problem-solving strategies for AI agents.",
       "Investigating whether agents can learn better planning, tool-use, and verification strategies from their own task history without changing the underlying model.",
       "Wrote the technical plan and Phase 0 software (typed, versioned strategy schema with tests); evaluation is planned on Terminal-Bench tasks with small open-weight models.",
     ],
@@ -104,10 +104,19 @@ const experiences = [
   {
     role: "Research Collaboration",
     org: "University of Arizona, with Prof. Haw-Shiuan Chang",
-    period: "2026 - Present",
+    period: "Aug 2026 - Present",
     highlights: [
       "Building a pipeline that generates multi-hop questions by tree search over retrieved passages and compares their difficulty with HotpotQA, MuSiQue, and FRAMES using LLM search agents.",
       "Extending it to IETF RFC documents with a BM25/Elasticsearch passage index on a university HPC cluster (Slurm).",
+    ],
+  },
+  {
+    role: "Research Collaboration",
+    org: "Multilingual GSM-Symbolic, with Kenneth Enevoldsen and co-authors",
+    period: "Aug 2026 - Present",
+    highlights: [
+      "Co-author (22 of 25) of \"Multilingual GSM-Symbolic: What determines capability transfer across languages?\", submitted to ICLR 2027 (under review).",
+      "The benchmark has 30,000 item-matched Q&A pairs across 15 languages built from symbolic templates; the analysis explains 92% of between-language variation.",
     ],
   },
   {
