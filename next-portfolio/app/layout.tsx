@@ -2,14 +2,15 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Sagandeep Kaur | Data Science and MLOps Portfolio",
+  title: "Sagandeep Kaur | ML/NLP Research, AI Engineering and Data Science",
   description:
-    "Portfolio of Sagandeep Kaur, IIT Madras Data Science student working across ML, backend systems, data pipelines, and MLOps.",
+    "Portfolio of Sagandeep Kaur, IIT Madras B.S. Data Science and Programming student working across ML/NLP research, AI engineering, data science, backend systems, and MLOps.",
 };
 
 const navItems = [
   { label: "About", href: "#about" },
   { label: "Experience", href: "#experience" },
+  { label: "Publications", href: "#publications" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
   { label: "Education", href: "#education" },

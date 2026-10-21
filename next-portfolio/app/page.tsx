@@ -16,7 +16,7 @@ const education = [
   {
     school: "Indian Institute of Technology, Madras",
     detail: "B.S. Data Science and Programming",
-    meta: "2023 - 2027 | CGPA: 8.98 | Project CGPA: 9.5",
+    meta: "2023 - Expected Oct 2026 | CGPA: 8.98 | Project CGPA: 9.5",
   },
   {
     school: "CBSE Class 12",
@@ -33,26 +33,38 @@ const education = [
 const skillGroups = [
   {
     title: "Programming and CS",
-    skills: ["Python", "Java", "SQL", "Data Structures", "OOP", "Problem Solving"],
+    skills: [
+      "Python",
+      "Java",
+      "SQL",
+      "JavaScript",
+      "TypeScript",
+      "Data Structures",
+      "OOP",
+      "Problem Solving",
+    ],
   },
   {
-    title: "Backend and Systems",
+    title: "Backend and Web",
     skills: [
+      "Django",
+      "Wagtail",
       "Flask",
       "FastAPI",
+      "Svelte",
       "REST APIs",
       "Authentication",
       "Async Tasks",
-      "Docker",
-      "Kubernetes (GKE)",
-      "GitHub Actions",
-      "OpenTelemetry",
+      "PostgreSQL",
+      "SQLite",
     ],
   },
   {
     title: "Data and ML",
     skills: [
       "Data Cleaning",
+      "Data Validation",
+      "Data Modeling",
       "EDA",
       "Feature Engineering",
       "Regression",
@@ -64,12 +76,36 @@ const skillGroups = [
     ],
   },
   {
+    title: "Deep Learning, NLP and LLMs",
+    skills: [
+      "PyTorch",
+      "Hugging Face Transformers",
+      "LoRA / PEFT",
+      "BERTopic",
+      "Sentence Transformers",
+      "RAG",
+      "FAISS",
+      "Ollama",
+    ],
+  },
+  {
     title: "MLOps and Cloud",
-    skills: ["DVC", "MLflow", "MLOps", "LLMOps", "MLSecOps", "Vertex AI", "GCS"],
+    skills: [
+      "Docker",
+      "Kubernetes (GKE)",
+      "CI/CD (GitHub Actions)",
+      "OpenTelemetry",
+      "DVC",
+      "MLflow",
+      "LLMOps",
+      "MLSecOps",
+      "Vertex AI",
+      "GCS",
+    ],
   },
   {
     title: "Tools and Visualization",
-    skills: ["Matplotlib", "Seaborn", "Excel", "Git", "Jira", "SQLite"],
+    skills: ["Linux", "Git", "Jira", "Matplotlib", "Seaborn", "Excel"],
   },
 ];
 
@@ -85,11 +121,14 @@ const experiences = [
   {
     role: "Research Intern",
     org: "Applied Artificial Intelligence Institute (A2I2), Deakin University",
-    period: "Nov 2026 - Jan 2027",
+    period: "Nov 2026 - Jan 2027 (incoming)",
     highlights: [
       "Research internship under Prof. Mohamed Abdelrazek on Adaptive Intelligence: self-adapting problem-solving strategies for AI agents.",
       "Investigating whether agents can learn better planning, tool-use, and verification strategies from their own task history without changing the underlying model.",
       "Wrote the technical plan and Phase 0 software (typed, versioned strategy schema with tests); evaluation is planned on Terminal-Bench tasks with small open-weight models.",
+    ],
+    links: [
+      { label: "GitHub", href: "https://github.com/Sagankaur/Adaptive-Agent-Strategies" },
     ],
   },
   {
@@ -111,27 +150,15 @@ const experiences = [
     ],
   },
   {
-    role: "Research Collaboration",
-    org: "Multilingual GSM-Symbolic, with Kenneth Enevoldsen and co-authors",
-    period: "Aug 2026 - Present",
-    highlights: [
-      "Co-author (22 of 25) of \"Multilingual GSM-Symbolic: What determines capability transfer across languages?\", on arXiv (2610.03367) and submitted to ICLR 2027 (under review).",
-      "The benchmark has 30,000 item-matched Q&A pairs across 15 languages built from symbolic templates; the analysis explains 92% of between-language variation.",
-    ],
-    links: [
-      { label: "arXiv", href: "https://arxiv.org/abs/2610.03367" },
-      { label: "OpenReview", href: "https://openreview.net/forum?id=9NjhH91nrC" },
-    ],
-  },
-  {
     role: "Software Engineering Intern",
     org: "NPTEL, IIT Madras",
     period: "Sep 2025 - Jul 2026",
     highlights: [
-      "Built and extended Django workflows for Local Chapter applications, corrections, and reviewer/admin actions.",
+      "Built and extended Django workflows for Local Chapter applications, change requests, corrections, and reviewer/admin actions.",
       "Improved AISHE mapping, duplicate detection, and institutional validation using exact and fuzzy matching.",
       "Implemented backend and frontend workflow changes across Django, Wagtail, JavaScript/TypeScript, and PostgreSQL.",
-      "Added regression coverage for authorization, validation, workflow transitions, and edge-case behavior.",
+      "Shipped Question Paper Tool (QPTool) features: fractional marks, instructor-scoped exam workflows, authorization checks, optimized nested APIs, and guided tours.",
+      "Added tests and regression coverage for workflow, validation, and edge-case behavior before merge.",
     ],
   },
   {
@@ -139,10 +166,10 @@ const experiences = [
     org: "Department of Management Studies, IIT Madras",
     period: "Sep 2025 - Dec 2025",
     highlights: [
-      "Analyzed system data patterns and generated insights through visualization.",
-      "Implemented topic modeling and interpretability techniques for unstructured data.",
-      "Performed preprocessing to structure raw text data for downstream analysis.",
-      "Improved usability of model outputs through structured interpretation.",
+      "Built an end-to-end NLP pipeline over 500K+ Glassdoor reviews for company sector classification, topic discovery, and employee sentiment analysis.",
+      "Compared BERTopic and Top2Vec with sentence-transformer embeddings (all-MiniLM-L6-v2, all-mpnet-base-v2), UMAP, and HDBSCAN using Silhouette, Davies-Bouldin, and Calinski-Harabasz scores.",
+      "Automated sector classification with the Wikipedia API and LLaMA models, cutting unclassified companies from ~40% to 2.4% through iterative LLM-assisted labeling.",
+      "Clustered Pros and Cons sentences separately, picked representative sentences with Maximum Marginal Relevance (MMR), and used LLaMA to generate readable topic labels.",
     ],
   },
   {
@@ -163,21 +190,37 @@ const experiences = [
   },
 ];
 
+const publications = [
+  {
+    title: "Multilingual GSM-Symbolic: What determines capability transfer across languages?",
+    authors: "Kenneth Enevoldsen, … , Sagandeep Kaur (22 of 25), … , Kristoffer Nielbo",
+    venue: "arXiv:2610.03367 (Oct 2026); submitted to ICLR 2027 (under review)",
+    period: "Collaboration since Aug 2026",
+    highlights: [
+      "Introduces a benchmark of 30,000 item-matched Q&A pairs across 15 languages, built from symbolic templates to limit overfitting.",
+      "Model size, language resource level, reasoning, and typological distance explain 92% of between-language variation and predict unseen-language performance within 6.0 pp.",
+    ],
+    links: [
+      { label: "arXiv", href: "https://arxiv.org/abs/2610.03367" },
+      { label: "OpenReview", href: "https://openreview.net/forum?id=9NjhH91nrC" },
+    ],
+  },
+];
+
 const projects = [
   {
     title: "QC-Leap",
-    subtitle: "AI-Powered Manufacturing Quality Control System",
-    href: "https://github.com/kushabarodekar/soft-engg-project-sep-2025-se-SEP-20",
+    subtitle: "Team project (contributor): AI-powered manufacturing quality control",
+    href: "https://github.com/kushabarodekar/QC-Leap",
     stack: "Next.js, React, TypeScript, FastAPI, PostgreSQL, Redis, Celery, PyTorch, OpenCV, Docker",
     highlights: [
-      "Built a full-stack quality-control dashboard for defect detection model management, training, inference, and reporting.",
-      "Implemented ML workflows with segmentation masks, Copy-Paste augmentation, class balancing, and MobileNetV3-Small classification.",
-      "Developed FastAPI services with JWT auth, PostgreSQL models, Redis/Celery jobs, and real-time training progress updates.",
+      "Team-built defect-detection platform supporting image annotation, synthetic defect generation, MobileNetV3 training with real-time progress, inference runs, team permissions, and automated defect reports.",
+      "Contributed as a team member rather than owner: 22 public commits covering UI, model and image views, account flows, navigation, and chatbot rendering.",
     ],
   },
   {
     title: "SiteSage AI",
-    subtitle: "Construction procurement intelligence copilot",
+    subtitle: "In progress | Construction procurement copilot for the Kaya AI IIT India Hackathon 2026",
     href: "https://github.com/Sagankaur/Construction-Procurement-Intelligence-Agent",
     stack: "Python, Streamlit, FAISS, SQLite, Scikit-learn, Plotly, Ollama (optional), Docker",
     highlights: [
@@ -199,7 +242,7 @@ const projects = [
   },
   {
     title: "Satellite Image Cloud Removal",
-    subtitle: "Generative AI reconstruction for remote sensing imagery",
+    subtitle: "In progress | Bharatiya Antariksh Hackathon 2026 (Challenge 2) generative reconstruction",
     href: "https://github.com/Sagankaur/Bharatiya-Antariksh-Hackathon",
     stack: "Python, PyTorch, ResUNet, GAN, OpenCV, NumPy, Pandas, Matplotlib, Kaggle GPU",
     highlights: [
@@ -256,7 +299,7 @@ const projects = [
   {
     title: "End-to-End MLOps Pipeline",
     subtitle: "Cloud-native ML deployment and observability",
-    href: "https://github.com/Sagankaur/23f2003511_MLOPS_WEEKLY_ASSIGNMENT",
+    href: "https://github.com/Sagankaur/Mlops-pipeline",
     stack: "Python, Scikit-learn, MLflow, DVC, GCS, Feast, BigQuery, FastAPI, Docker, GKE, OpenTelemetry",
     highlights: [
       "Built an Iris classification pipeline with cloud artifact storage, data versioning, feature store setup, and experiment tracking.",
@@ -279,10 +322,11 @@ const projects = [
     title: "System Threat Forecaster",
     subtitle: "System vulnerability classification",
     href: "https://github.com/Sagankaur/Machine-Learning-Classification",
-    stack: "Python, Scikit-learn, Pandas, Matplotlib",
+    stack: "Python, Scikit-learn, LightGBM, XGBoost, Pandas, Matplotlib",
     highlights: [
       "Built a classification model to predict system vulnerabilities.",
       "Implemented preprocessing, evaluation, and model performance analysis.",
+      "Benchmarked 45 model iterations across linear, SVM, tree-based, boosting, MLP, and ensemble models; tuned LightGBM reached the best Kaggle accuracy of 0.63270.",
     ],
   },
   {
@@ -358,7 +402,7 @@ export default function Home() {
         <div className="mx-auto flex min-h-[78vh] w-full max-w-7xl items-center px-5 py-20 sm:px-8 lg:px-10">
           <div className="max-w-2xl">
             <p className="text-sm font-semibold uppercase text-teal-700">
-              Data Science | MLOps | Backend Systems
+              Data Science | ML &amp; NLP Research | Backend Systems
             </p>
             <h1 className="mt-5 text-5xl font-semibold leading-tight text-zinc-950 sm:text-6xl lg:text-7xl">
               Sagandeep Kaur
@@ -471,7 +515,55 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="skills" className="border-b border-zinc-200 bg-zinc-50 px-5 py-16 sm:px-8 lg:px-10">
+      <section id="publications" className="border-b border-zinc-200 bg-zinc-50 px-5 py-16 sm:px-8 lg:px-10">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeader
+            eyebrow="Publications"
+            title="Research papers"
+            description="Co-authored research on multilingual reasoning in large language models."
+          />
+          <div className="grid gap-5">
+            {publications.map((publication) => (
+              <article
+                key={publication.title}
+                className="rounded-lg border border-zinc-200 bg-white p-6 shadow-sm"
+              >
+                <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                  <div>
+                    <h3 className="text-xl font-semibold text-zinc-950">{publication.title}</h3>
+                    <p className="mt-2 text-sm text-zinc-700">{publication.authors}</p>
+                    <p className="mt-1 text-sm font-medium text-teal-800">{publication.venue}</p>
+                  </div>
+                  <p className="shrink-0 text-sm text-zinc-600 sm:text-right">{publication.period}</p>
+                </div>
+                <ul className="mt-5 space-y-3 text-sm leading-6 text-zinc-700">
+                  {publication.highlights.map((highlight) => (
+                    <li key={highlight} className="flex gap-3">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-500" />
+                      <span>{highlight}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold">
+                  {publication.links.map((link) => (
+                    <a
+                      key={link.href}
+                      href={link.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-teal-800 hover:text-teal-950"
+                    >
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" className="border-b border-zinc-200 bg-white px-5 py-16 sm:px-8 lg:px-10">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
             eyebrow="Technical Skills"
@@ -500,7 +592,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="projects" className="border-b border-zinc-200 bg-white px-5 py-16 sm:px-8 lg:px-10">
+      <section id="projects" className="border-b border-zinc-200 bg-zinc-50 px-5 py-16 sm:px-8 lg:px-10">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
             eyebrow="Projects"
@@ -542,7 +634,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="education" className="border-b border-zinc-200 bg-zinc-50 px-5 py-16 sm:px-8 lg:px-10">
+      <section id="education" className="border-b border-zinc-200 bg-white px-5 py-16 sm:px-8 lg:px-10">
         <div className="mx-auto max-w-7xl">
           <SectionHeader eyebrow="Education" title="Academic background" />
           <div className="grid gap-5 md:grid-cols-3">

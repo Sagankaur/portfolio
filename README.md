@@ -15,6 +15,7 @@ A responsive portfolio that presents my applied ML, backend, data, and MLOps wor
 ## Highlights
 
 - Experience across AI4Bharat, a Deakin University research internship, faculty research collaborations, NPTEL software engineering, NLP research, and teaching assistance.
+- A Publications section for co-authored research (Multilingual GSM-Symbolic, arXiv preprint under review at ICLR 2027).
 - Selected projects in retrieval-augmented generation, computer vision, multilingual ML, backend systems, and MLOps.
 - Responsive project and experience cards with accessible external links.
 - No runtime API keys or database required.
@@ -67,7 +68,7 @@ app/layout.tsx
   |
   +-- app/page.tsx
   |     |-- hero and contact links
-  |     |-- experience and skills
+  |     |-- experience, publications, and skills
   |     |-- project evidence cards
   |     +-- education and contact
   |
@@ -79,7 +80,7 @@ Static visual assets in public/
 Next.js production server or Vercel
 ```
 
-The site is intentionally data-light: experience, skills, and project entries are typed constants in `app/page.tsx`. This keeps deployment simple and makes public claims easy to review alongside their linked repositories.
+The site is intentionally data-light: experience, publication, skills, and project entries are typed constants in `app/page.tsx`. This keeps deployment simple and makes public claims easy to review alongside their linked repositories.
 
 ## Quality checks
 
@@ -93,7 +94,7 @@ Manual checks should cover desktop and mobile layouts, anchor navigation, keyboa
 
 ## Updating project content
 
-1. Edit the `experiences` or `projects` arrays in `next-portfolio/app/page.tsx`.
+1. Edit the `experiences`, `publications`, or `projects` arrays in `next-portfolio/app/page.tsx`.
 2. Keep each claim supported by a linked repository, merged contribution, or other public evidence.
 3. Distinguish personal prototypes from team, academic, internship, and production work.
 4. Run lint and a production build before deployment.
