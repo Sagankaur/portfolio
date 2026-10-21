@@ -75,6 +75,42 @@ const skillGroups = [
 
 const experiences = [
   {
+    role: "Tech Team (Full-time)",
+    org: "AI4Bharat, IIT Madras",
+    period: "Oct 2026 - Present",
+    highlights: [
+      "Joined AI4Bharat's Tech Team on a full-time engagement running through January 2027.",
+    ],
+  },
+  {
+    role: "Research Intern",
+    org: "Applied Artificial Intelligence Institute (A2I2), Deakin University",
+    period: "2026 - Present",
+    highlights: [
+      "Working under Prof. Mohamed Abdelrazek on Adaptive Intelligence: self-adapting problem-solving strategies for AI agents.",
+      "Investigating whether agents can learn better planning, tool-use, and verification strategies from their own task history without changing the underlying model.",
+      "Wrote the technical plan and Phase 0 software (typed, versioned strategy schema with tests); evaluation is planned on Terminal-Bench tasks with small open-weight models.",
+    ],
+  },
+  {
+    role: "Research Collaboration",
+    org: "IIT Madras, with Prof. Rajesh Kumar (HSS) and Prof. Mitesh M. Khapra (CSE)",
+    period: "2026 - Present",
+    highlights: [
+      "Studying how LLM grammatical-error correction changes learner writing, comparing minimal and fluency-oriented prompts against human correctors across learner-English corpora.",
+      "Built the experiment pipeline (prompted correction runs, ERRANT-based edit scoring, bootstrap statistics) and checked robustness across Gemma, Llama-3.3-70B, and Qwen2.5-72B. Paper draft in preparation.",
+    ],
+  },
+  {
+    role: "Research Collaboration",
+    org: "University of Arizona, with Prof. Haw-Shiuan Chang",
+    period: "2026 - Present",
+    highlights: [
+      "Building a pipeline that generates multi-hop questions by tree search over retrieved passages and compares their difficulty with HotpotQA, MuSiQue, and FRAMES using LLM search agents.",
+      "Extending it to IETF RFC documents with a BM25/Elasticsearch passage index on a university HPC cluster (Slurm).",
+    ],
+  },
+  {
     role: "Software Engineering Intern",
     org: "NPTEL, IIT Madras",
     period: "Sep 2025 - Jul 2026",
@@ -168,6 +204,7 @@ const projects = [
       "Built an English, Hindi, and Tamil transcription pipeline for a Kaggle speech recognition challenge.",
       "Added language identification and dynamic model routing across Whisper large-v3-turbo and Indic Conformer models.",
       "Implemented transcript normalization, WER evaluation, beam-search inference, FP16 GPU execution, caching, and Kaggle submission generation.",
+      "Placed 22nd of 190 teams on the Kaggle public leaderboard with a best WER of 0.221.",
     ],
   },
   {
@@ -178,7 +215,7 @@ const projects = [
     highlights: [
       "Fine-tuned google/gemma-3-1b-it with LoRA/PEFT for binary sentiment classification across 13 Indian languages.",
       "Built preprocessing, label encoding, tokenization, training, validation, diagnostics, and Kaggle submission workflows.",
-      "Used memory-efficient training with bitsandbytes and Hugging Face Trainer, reaching 0.9778 local validation Macro F1.",
+      "Used memory-efficient training with bitsandbytes and Hugging Face Trainer, scoring 0.9756 public / 0.9655 private on Kaggle (rank 41 of 209, public leaderboard).",
     ],
   },
   {
@@ -189,7 +226,18 @@ const projects = [
     highlights: [
       "Built a PyTorch restoration pipeline for the RELLISUR/Kaggle dataset with denoising, illumination correction, and 4x super-resolution.",
       "Designed a custom SR U-Net with encoder-decoder blocks, skip connections, PixelShuffle upscaling, and refinement layers.",
-      "Reduced private RMSE from a 41.8 baseline to about 18.7 using EDA-driven modeling, loss tuning, mixed precision, TTA, and calibration.",
+      "Reduced public RMSE from a 41.8 baseline to 18.71 (best private 16.65) using EDA-driven modeling, loss tuning, mixed precision, TTA, and calibration; rank 14 of 175 on the public leaderboard.",
+    ],
+  },
+  {
+    title: "Reconstruct Corrupt Images",
+    subtitle: "Image restoration for an IIT Madras GenAI Kaggle competition",
+    href: "https://github.com/Sagankaur/Reconstruct-corrupt-images",
+    stack: "Python, PyTorch, U-Net, NAFNet, NumPy, Pandas, Matplotlib, Kaggle GPU",
+    highlights: [
+      "Restored clean 32x32 RGB images from corrupted inputs, progressing from a Gaussian-blur baseline through a residual CNN and U-Net to a NAFNet with bottleneck attention.",
+      "Trained the final NAFNet on a deadline-aware ~5 h Tesla T4 schedule with test-time augmentation.",
+      "Best MSE 32.30 public / 32.58 private against a pass threshold of 180, rank 9 of 96 teams on the public leaderboard.",
     ],
   },
   {
@@ -365,13 +413,13 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <SectionHeader
             eyebrow="Experience"
-            title="Applied engineering and teaching work"
-            description="Recent roles across web development, NLP, student support, and event operations."
+            title="Engineering, research, and teaching work"
+            description="Recent roles across AI engineering, agent and NLP research, web development, student support, and event operations."
           />
           <div className="grid gap-5 lg:grid-cols-2">
             {experiences.map((experience) => (
               <article
-                key={`${experience.role}-${experience.org}`}
+                key={`${experience.role}-${experience.org}-${experience.period}`}
                 className="rounded-lg border border-zinc-200 bg-white p-6 shadow-sm"
               >
                 <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">

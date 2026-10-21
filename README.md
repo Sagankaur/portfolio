@@ -14,7 +14,7 @@ A responsive portfolio that presents my applied ML, backend, data, and MLOps wor
 
 ## Highlights
 
-- Experience across NPTEL software engineering, NLP research, and teaching assistance.
+- Experience across AI4Bharat, a Deakin University research internship, faculty research collaborations, NPTEL software engineering, NLP research, and teaching assistance.
 - Selected projects in retrieval-augmented generation, computer vision, multilingual ML, backend systems, and MLOps.
 - Responsive project and experience cards with accessible external links.
 - No runtime API keys or database required.
