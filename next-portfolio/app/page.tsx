@@ -95,7 +95,7 @@ const experiences = [
   {
     role: "Research Collaboration",
     org: "IIT Madras, with Prof. Rajesh Kumar (HSS) and Prof. Mitesh M. Khapra (CSE)",
-    period: "2026 - Present",
+    period: "Aug 2026 - Present",
     highlights: [
       "Studying how LLM grammatical-error correction changes learner writing, comparing minimal and fluency-oriented prompts against human correctors across learner-English corpora.",
       "Built the experiment pipeline (prompted correction runs, ERRANT-based edit scoring, bootstrap statistics) and checked robustness across Gemma, Llama-3.3-70B, and Qwen2.5-72B. Paper draft in preparation.",
@@ -115,8 +115,12 @@ const experiences = [
     org: "Multilingual GSM-Symbolic, with Kenneth Enevoldsen and co-authors",
     period: "Aug 2026 - Present",
     highlights: [
-      "Co-author (22 of 25) of \"Multilingual GSM-Symbolic: What determines capability transfer across languages?\", submitted to ICLR 2027 (under review).",
+      "Co-author (22 of 25) of \"Multilingual GSM-Symbolic: What determines capability transfer across languages?\", on arXiv (2610.03367) and submitted to ICLR 2027 (under review).",
       "The benchmark has 30,000 item-matched Q&A pairs across 15 languages built from symbolic templates; the analysis explains 92% of between-language variation.",
+    ],
+    links: [
+      { label: "arXiv", href: "https://arxiv.org/abs/2610.03367" },
+      { label: "OpenReview", href: "https://openreview.net/forum?id=9NjhH91nrC" },
     ],
   },
   {
@@ -446,6 +450,21 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
+                {experience.links ? (
+                  <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold">
+                    {experience.links.map((link) => (
+                      <a
+                        key={link.href}
+                        href={link.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-teal-800 hover:text-teal-950"
+                      >
+                        {link.label}
+                      </a>
+                    ))}
+                  </div>
+                ) : null}
               </article>
             ))}
           </div>
